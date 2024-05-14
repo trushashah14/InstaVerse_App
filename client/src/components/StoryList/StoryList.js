@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Spin } from "antd";
-import Story from "../Story";
+import Story from "../../Story";
 import { useSelector } from "react-redux";
 
 function StoryList({setSelectedId}) {

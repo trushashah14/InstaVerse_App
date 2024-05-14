@@ -41,6 +41,7 @@ function AuthForm() {
         <Card  style={styles.card} title={<Title level={4}>{isLogin ? "Login to" : "Join"} Instaverse</Title>}>
           <Form
             form={form}
+            name="authform"
             size="large"
             wrapperCol={{ span: 20, offset: 2 }}
             onFinish={onSubmit}
@@ -64,7 +65,7 @@ function AuthForm() {
               name="password"
               rules={[{ required: true, message: "Please enter your password" }]}
             >
-              <Input.Password prefix={<LockOutlined />} placeholder="Password" />
+              <Input.Password type="password" prefix={<LockOutlined />} placeholder="Password" />
             </Form.Item>
             {!isLogin && (
               <Form.Item
@@ -72,17 +73,17 @@ function AuthForm() {
                 rules={[{ required: true, message: "Please repeat your password" }]}
               >
                 <Input.Password
+                type="password"
                   prefix={<LockOutlined />}
                   placeholder="Confirm password"
                 />
               </Form.Item>
             )}
             <Form.Item>
-              <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
+              <Button typeof="primary" htmlType="submit">
                 {isLogin ? "Log In" : "Join"}
               </Button>
-            </Form.Item>
-            <Form.Item>
+              <span style={{ margin: "0 10px 0px 20px" }}> Or</span>
               <Button type="link" onClick={switchMode}>
                 {isLogin ? "Register Now" : "Have an Account?"}
               </Button>

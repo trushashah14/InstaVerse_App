@@ -1,7 +1,7 @@
 import React , {useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
 import StoryForm from "../StoryForm";
-import StoryList from "../StoryForm/StoryList";
+import StoryList from "../StoryList";
 import { Layout } from "antd";
 import styles from './styles';
 import { getStories } from "../../actions/stories";

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "https://instaverseapp.onrender.com" });
+const api = axios.create({ baseURL: "https://instaverse-app.onrender.com" });
 
 
 // Axios interceptor to include the token in the Authorization header for each request

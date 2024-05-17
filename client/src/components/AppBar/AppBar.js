@@ -5,8 +5,7 @@ import Logo from "../../images/Logo.svg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
-import {jwtDecode} from 'jwt-decode';
-
+import jwtDecode from 'jwt-decode'; // Import jwtDecode function from 'jwt-decode' library
 
 const { Title } = Typography;
 const { Header } = Layout;
@@ -16,22 +15,25 @@ function AppBar() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Retrieve user information from local storage
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
   useEffect(() => {
     const token = user?.token;
     if (token) {
-      const decodedToken = jwtDecode(token);
+      const decodedToken = jwtDecode(token); // Decode the JWT token
 
+      // Check if the token has expired
       if (decodedToken.exp * 1000 < new Date().getTime()) logout();
     }
     setUser(JSON.parse(localStorage.getItem("profile")));
   }, [location, user?.token]);
 
+  // Function to handle user logout
   const logout = () => {
-    dispatch({ type: LOGOUT });
-    setUser(null);
-    navigate("/authform");
+    dispatch({ type: LOGOUT }); // Dispatch logout action
+    setUser(null); // Clear user information
+    navigate("/authform"); // Redirect user to the authentication form
   };
 
   return (

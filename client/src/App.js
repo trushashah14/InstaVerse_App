@@ -7,16 +7,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthForm from "./components/AuthForm";
 const { Footer } = Layout;
 
+// Main App component
 const App = () => {
   return (
-    <BrowserRouter>
-      <Layout style={styles.layout}>
-        <AppBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/authform" element={<AuthForm />} />
+    <BrowserRouter> {/* BrowserRouter to manage navigation */}
+      <Layout style={styles.layout}> {/* Layout component with custom styles */}
+        <AppBar /> {/* AppBar component for navigation */}
+        <Routes> {/* Routes component to define route paths */}
+          <Route path="/" element={<Home />} /> {/* Route for Home component */}
+          <Route path="/authform" element={<AuthForm />} /> {/* Route for AuthForm component */}
         </Routes>
-        <Footer style={styles.footer}>2023 Instaverse</Footer>
+        <Footer style={styles.footer}>2023 Instaverse</Footer> {/* Footer section with custom styles */}
       </Layout>
     </BrowserRouter>
   );

@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# InstaVerse-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
+InstaVerse-App is a MERN (MongoDB, Express.js, React.js, Node.js) stack application that allows users to share stories with others. Users can register/login to the platform, create stories by filling out a form with captions, tags, and images, and interact with other users' stories by liking, editing, and deleting them.
 
-## Available Scripts
+## Steps to Run the Application:
 
-In the project directory, you can run:
+1. Clone the Repository:
+`git clone https://github.com/your-username/InstaVerse-App.git`
 
-### `npm start`
+2. Set Up Environment Variables:
+Create a .env file in the root directory and add the necessary environment variables, including MongoDB connection string, JWT secret key
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Run the Server:
+Start the backend server:
+`npm start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Run the Client:
+Open a new terminal window/tab and navigate to the client directory, then start the React development server:
 
-### `npm test`
+```
+cd client
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Access the Application:
+Open your web browser and navigate to http://localhost:3000 to access the InstaVerse-App.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How the Website Runs:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. User Authentication:
 
-### `npm run eject`
+- Users can register/login to the platform using their email address and password.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Creating Stories:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- After logging in, users can create stories by filling out a form that includes fields for captions, tags, and images.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Interacting with Stories:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Users can like, edit, and delete their own stories.
+- Users can also like stories posted by other users.
 
-## Learn More
+4. Viewing Stories:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- When not logged in or registered, visitors can view the stories on the homepage but cannot like, edit, or delete them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note: Ensure that MongoDB is running locally or that the connection string points to a MongoDB instance accessible by the application.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out for any further assistance or queries regarding the InstaVerse-App.

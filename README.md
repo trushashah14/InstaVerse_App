@@ -8,7 +8,7 @@ InstaVerse-App is a MERN (MongoDB, Express.js, React.js, Node.js) stack applicat
 
 ### 1. Clone the Repository:
 
-`git clone https://github.com/your-username/InstaVerse-App.git`
+`git clone https://github.com/trushashah14/InstaVerse-App.git`
 
 ### 2. Set Up Environment Variables:
 
